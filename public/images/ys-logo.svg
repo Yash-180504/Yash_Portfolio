@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" width="120" height="140">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4d58d"/>
+      <stop offset="30%" style="stop-color:#e8b04a"/>
+      <stop offset="60%" style="stop-color:#d4952f"/>
+      <stop offset="100%" style="stop-color:#b87a1f"/>
+    </linearGradient>
+  </defs>
+  <!-- Y letter -->
+  <path d="M10 10 L42 65 L42 95 L52 95 L52 65 L84 10 L72 10 L47 52 L22 10 Z" 
+        fill="url(#gold)" />
+  <!-- S letter intertwined -->
+  <path d="M75 48 C75 35 65 28 52 28 C39 28 30 35 30 45 C30 55 38 60 52 65 C66 70 78 78 78 95 C78 110 66 120 50 120 C34 120 22 110 22 95 L34 95 C34 103 40 108 50 108 C60 108 66 103 66 95 C66 85 58 80 44 75 C30 70 18 62 18 45 C18 30 30 18 52 18 C70 18 82 28 84 45 Z" 
+        fill="url(#gold)" opacity="0.9"/>
+</svg>
