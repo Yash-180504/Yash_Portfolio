@@ -279,6 +279,40 @@ h2.landing-info-h2 {
     font-size: 38px;
   }
 }
+@media screen and (max-width: 499px) {
+  .landing-intro {
+    top: 8%;
+    left: 0;
+  }
+  .landing-intro h2 {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .landing-intro h1 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .landing-info {
+    bottom: 24px;
+  }
+  .landing-info h3 {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .landing-info h2 {
+    font-size: 26px;
+    line-height: 30px;
+    margin-left: 10px;
+    margin-top: -12px;
+  }
+  h2.landing-info-h2 {
+    font-size: 30px;
+  }
+  .character-model {
+    height: 70vh;
+    bottom: 30px;
+  }
+}
 @media screen and (min-width: 768px) {
   .character-model {
     height: 80vh;

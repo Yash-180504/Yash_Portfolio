@@ -1,12 +1,22 @@
 import {
   FaGithub,
   FaLinkedinIn,
+  FaWhatsapp,
 } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
 import HoverLinks from "./HoverLinks";
+
+const getWhatsappGreeting = () => {
+  const hour = new Date().getHours();
+  const greeting =
+    hour < 12 ? "Good morning" : hour < 17 ? "Good afternoon" : "Good evening";
+  return encodeURIComponent(
+    `${greeting} Yash! I came across your portfolio and I have some work for you. Would love to connect!`
+  );
+};
 
 const SocialIcons = () => {
   useEffect(() => {
@@ -76,12 +86,24 @@ const SocialIcons = () => {
           </a>
         </span>
       </div>
-      <a className="resume-button" href="#" data-cursor="disable">
-        <HoverLinks text="RESUME" />
-        <span>
-          <TbNotes />
-        </span>
-      </a>
+      <div className="resume-whatsapp-group">
+        <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer" data-cursor="disable">
+          <HoverLinks text="RESUME" />
+          <span>
+            <TbNotes />
+          </span>
+        </a>
+        <a
+          href={`https://wa.me/918102175166?text=${getWhatsappGreeting()}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsapp-button"
+          data-cursor="disable"
+          title="Chat on WhatsApp"
+        >
+          <FaWhatsapp />
+        </a>
+      </div>
     </div>
   );
 };

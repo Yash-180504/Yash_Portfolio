@@ -8,51 +8,59 @@ gsap.registerPlugin(useGSAP);
 
 const projects = [
   {
-    title: "Resume Parser",
-    category: "NLP / AI",
-    tools: "Python, spaCy, NLP, Regex",
-    image: "/images/placeholder.webp",
-    link: "https://github.com/Yash-180504/Resume_Parser",
+    title: "ShivvayOS",
+    category: "AI Workforce Orchestration",
+    tools: "Next.js, Python, FastAPI, CrewAI, LangGraph",
+    preview: "https://shivvayos.vercel.app",
+    image: null,
+    link: "https://shivvayos.vercel.app",
   },
   {
     title: "AI Learning Companion",
     category: "AI System",
     tools: "Python, ML, React, Node.js",
-    image: "/images/placeholder.webp",
-    link: "https://github.com/Yash-180504/Learning_companion",
+    preview: "https://learning-companion-two.vercel.app",
+    image: null,
+    link: "https://learning-companion-two.vercel.app",
   },
   {
     title: "Alzheimer's Detection",
     category: "ML / Healthcare",
     tools: "Python, scikit-learn, Pandas",
-    image: "/images/placeholder.webp",
+    preview: null,
+    image: "/images/alzheimer-preview.svg",
     link: "https://github.com/Yash-180504/Alzheimer-Disease-Detection",
+  },
+  {
+    title: "Resume Parser",
+    category: "NLP / AI",
+    tools: "Python, spaCy, NLP, Regex",
+    preview: "https://resume-parser-roan-five.vercel.app",
+    image: null,
+    link: "https://resume-parser-roan-five.vercel.app",
   },
   {
     title: "Mom's Magic",
     category: "Full Stack",
     tools: "React, Node.js, Express, MongoDB",
-    image: "/images/placeholder.webp",
-    link: "https://github.com/Yash-180504/moms_magic",
+    preview: "https://www.momsmagic.fun",
+    image: null,
+    link: "https://www.momsmagic.fun",
   },
   {
     title: "Careasify",
     category: "Service Platform",
     tools: "TypeScript, Next.js",
-    image: "/images/placeholder.webp",
-    link: "https://github.com/Yash-180504/Careasify",
-  },
-  {
-    title: "ShivvayOS",
-    category: "AI Workforce Orchestration",
-    tools: "Next.js, Python, FastAPI, CrewAI, LangGraph",
-    image: "/images/placeholder.webp",
-    link: "https://github.com/Yash-180504/ShivvayOS",
+    preview: "https://careasify.com",
+    image: null,
+    link: "https://careasify.com",
   },
 ];
 
 const Work = () => {
   useGSAP(() => {
+    if (window.innerWidth <= 768) return;
+
     let translateX: number = 0;
 
     function setTranslateX() {
@@ -113,6 +121,7 @@ const Work = () => {
                 <p>{project.tools}</p>
               </div>
               <WorkImage
+                preview={project.preview}
                 image={project.image}
                 alt={project.title}
                 link={project.link}

@@ -30,6 +30,20 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
+                <h4>Full-Stack & Web Development Journey</h4>
+                <h5>Self-Directed Learning & Projects</h5>
+              </div>
+              <h3>2025</h3>
+            </div>
+            <p>
+              Expanded into full-stack development and modern web technologies,
+              building responsive applications and strengthening development
+              skills through real-world projects.
+            </p>
+          </div>
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
                 <h4>Artificial Intelligence Intern</h4>
                 <h5>Pinnacle Labs</h5>
               </div>

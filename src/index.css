@@ -151,11 +151,28 @@ body {
 .techstack {
   width: 100%;
   position: relative;
-  height: var(--vh);
+  height: calc(var(--vh) * 1.4);
   margin: auto;
   padding-top: 50px;
   margin-top: 0;
   margin-bottom: -100px;
+}
+@media only screen and (max-width: 1024px) {
+  .techstack {
+    height: calc(var(--vh) * 1.1);
+    margin-bottom: -50px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .techstack {
+    height: 80vh;
+    padding-top: 30px;
+    margin-bottom: 0;
+  }
+  .techstack h2 {
+    font-size: 28px;
+    top: 60px;
+  }
 }
 
 .techstack h2 {
@@ -210,5 +227,11 @@ body {
   .section-container {
     width: 500px;
     max-width: var(--cWidth);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .section-container {
+    width: 100%;
+    max-width: calc(100% - 24px);
   }
 }

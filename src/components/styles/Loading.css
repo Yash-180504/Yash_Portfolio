@@ -105,6 +105,7 @@
   text-transform: uppercase;
   font-family: var(--mono);
   letter-spacing: 2px;
+  min-height: 1.2em;
 }
 .loading-content-in {
   position: relative;
@@ -124,6 +125,7 @@
   text-align: center;
   transition: 1s;
   max-width: var(--Lsize);
+  min-height: 1em;
 }
 .loading-clicked .loading-content2 {
   opacity: 0;
@@ -382,6 +384,21 @@
   }
   .loader-title {
     font-size: 16px;
+  }
+}
+@media only screen and (max-width: 499px) {
+  .loading-marquee {
+    font-size: 36px;
+  }
+  .loading-button {
+    padding: 16px 36px;
+    font-size: 14px;
+  }
+  .loading-wrap {
+    --Lsize: 110px;
+  }
+  .loading-container {
+    left: 36px;
   }
 }
 @media only screen and (min-width: 1200px) {

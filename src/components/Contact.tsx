@@ -1,4 +1,4 @@
-import { MdArrowOutward, MdCopyright } from "react-icons/md";
+import { MdArrowOutward, MdCopyright, MdLocationOn } from "react-icons/md";
 import "./styles/Contact.css";
 
 const Contact = () => {
@@ -14,11 +14,9 @@ const Contact = () => {
                 yashsharmacbsa@gmail.com
               </a>
             </p>
-            <h4>Phone</h4>
-            <p>
-              <a href="tel:+918102175166" data-cursor="disable">
-                +91 81021 75166
-              </a>
+            <h4>Location</h4>
+            <p className="contact-location">
+              <MdLocationOn /> Bhubaneswar, Odisha
             </p>
           </div>
           <div className="contact-box">

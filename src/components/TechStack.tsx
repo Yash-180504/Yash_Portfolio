@@ -21,13 +21,21 @@ const imageUrls = [
   "/images/mysql.webp",
   "/images/typescript.webp",
   "/images/javascript.webp",
+  "/images/python.svg",
+  "/images/docker.svg",
+  "/images/fastapi.svg",
+  "/images/tensorflow.svg",
+  "/images/sklearn.svg",
+  "/images/gcp.svg",
+  "/images/git.svg",
+  "/images/pandas.svg",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
 
-const spheres = [...Array(30)].map(() => ({
-  scale: [0.7, 1, 0.8, 1, 1][Math.floor(Math.random() * 5)],
+const spheres = [...Array(50)].map(() => ({
+  scale: [0.35, 0.5, 0.4, 0.5, 0.45][Math.floor(Math.random() * 5)],
 }));
 
 type SphereProps = {
@@ -173,7 +181,7 @@ const TechStack = () => {
       <Canvas
         shadows
         gl={{ alpha: true, stencil: false, depth: false, antialias: false }}
-        camera={{ position: [0, 0, 20], fov: 32.5, near: 1, far: 100 }}
+        camera={{ position: [0, 0, 20], fov: 28, near: 1, far: 100 }}
         onCreated={(state) => (state.gl.toneMappingExposure = 1.5)}
         className="tech-canvas"
       >

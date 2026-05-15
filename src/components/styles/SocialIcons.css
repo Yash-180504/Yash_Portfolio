@@ -43,25 +43,32 @@
   will-change: left, top;
   transition: transform 0.3s ease-out;
 }
-.resume-button {
+.resume-whatsapp-group {
   position: absolute;
+  bottom: 36px;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
   z-index: 99;
+}
+.resume-button {
+  position: static;
   display: flex;
   gap: 5px;
-  bottom: 40px;
-  right: 0;
   width: auto;
   text-wrap: nowrap;
   letter-spacing: 4px;
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 13px;
+  line-height: 13px;
   font-weight: 600;
   font-family: var(--mono);
   color: rgba(232, 176, 74, 0.5);
   cursor: pointer;
   transition: 0.5s;
-  transform-origin: left bottom;
   transform: translateX(100%) rotateZ(-90deg);
+  transform-origin: left bottom;
 }
 .resume-button:hover {
   color: var(--accentGold);
@@ -69,10 +76,41 @@
 }
 div.resume-button span {
   color: #fff;
-  font-size: 17px;
+  font-size: 14px;
   margin-top: -1px;
   display: flex;
   align-items: center;
+}
+.resume-whatsapp-group {
+  position: absolute;
+  bottom: 36px;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  z-index: 99;
+}
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background-color: #0b080c;
+  border: 1px solid rgba(232, 176, 74, 0.35);
+  color: rgba(232, 176, 74, 0.6);
+  font-size: 14px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+.whatsapp-button:hover {
+  background-color: var(--accentGold);
+  border-color: var(--accentGold);
+  color: #0b080c;
+  box-shadow: 0 0 14px rgba(232, 176, 74, 0.35);
+  transform: scale(1.08);
 }
 .check-line {
   position: fixed;
@@ -95,11 +133,47 @@ div.resume-button span {
 @media only screen and (min-width: 768px) {
   .resume-button {
     transform: none;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 17px;
+    line-height: 17px;
   }
   div.resume-button span {
-    font-size: 23px;
+    font-size: 19px;
     margin-top: -1.5px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .resume-whatsapp-group {
+    bottom: 20px;
+    right: 0;
+  }
+  .resume-button {
+    transform: none;
+    font-size: 11px;
+    line-height: 11px;
+    letter-spacing: 2px;
+  }
+  div.resume-button span {
+    font-size: 13px;
+  }
+  .whatsapp-button {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .icons-section {
+    bottom: 0;
+  }
+  .resume-whatsapp-group {
+    bottom: 14px;
+  }
+  .resume-button {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+  .social-icons {
+    left: -10px;
+    bottom: 14px;
   }
 }

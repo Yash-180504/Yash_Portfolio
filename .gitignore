@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Sensitive model files
+public/models/character.glb
+public/models/encrypt.cjs
